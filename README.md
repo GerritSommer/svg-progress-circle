@@ -5,6 +5,8 @@ An addon for ember-cli that adds a component to show a sizable circle made with 
 * different sizes
 * SVG - no CSS hacks
 
+![Screenshot](preview.png)
+
 ## Installation
 
 * `ember install svg-progress-circle`
