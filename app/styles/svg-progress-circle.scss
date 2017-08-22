@@ -1,0 +1,23 @@
+.progress-circle {
+  transform: rotate(-90deg);
+  display: inline-block;
+
+  &__svg {
+
+  }
+
+  &__circle {
+    stroke: #cccccc;
+  }
+
+  &__indicator {
+
+    &--filled {
+      stroke: #004461;
+    }
+
+    &--empty {
+      stroke: none;
+    }
+  }
+}

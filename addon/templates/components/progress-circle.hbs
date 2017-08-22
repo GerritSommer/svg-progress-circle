@@ -1,0 +1,34 @@
+<svg
+  class="progress-circle__svg"
+  width="{{SVGsize}}"
+  height="{{SVGsize}}"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+  <circle
+    class="progress-circle__circle"
+    class=""
+    r="{{radius}}"
+    cy="{{coordinates}}"
+    cx="{{coordinates}}"
+    stroke-width="{{strokeWidth}}"
+    fill="none"
+  ></circle>
+
+  <circle
+    class="progress-circle__indicator{{if zeroPercentage '--empty' '--filled'}}"
+    r="{{radius}}"
+    cy="{{coordinates}}"
+    cx="{{coordinates}}"
+    stroke-width="{{strokeWidth}}"
+    stroke="red"
+    fill="none"
+    stroke-dasharray="{{circumference}}"
+    stroke-dashoffset="{{strokeDashoffset}}"
+  >
+  </circle>
+
+  {{yield}}
+
+</svg>
+
