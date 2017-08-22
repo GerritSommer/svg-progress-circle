@@ -1,10 +1,13 @@
 # SVG-progress-circle
 
-An addon for ember-cli that adds a component to show a sizable circle made with a SVG to show a progress from 1-100;
+An addon for ember-cli that adds a component to show a sizable circle made with a SVG.
+This component is part of the rewrite of the frontend-app for my job at easyPEP.
 
-* different sizes
-* SVG - no CSS hacks
+* easyPEP (german name): [homepage](https://easypep.de/de/)
+* Staffomatic (english name): [homepage](https://staffomatic.com/en/)
+* [easyPEP github](https://github.com/easyPEP)
 
+## Screenshot
 ![Screenshot](preview.png)
 
 ## Installation
