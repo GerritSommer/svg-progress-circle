@@ -1,7 +1,7 @@
 {
   "name": "svg-progress-circle",
   "version": "0.0.2",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember addon: Adds a component to show a SVG progress circle",
   "keywords": [
     "ember-addon",
     "svg",
@@ -15,7 +15,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/GerritSommer/svg-progress-circle",
   "scripts": {
     "build": "ember build",
     "start": "ember server",

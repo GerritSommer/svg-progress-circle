@@ -23,7 +23,7 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 ## Usage
 
 ```handlebars
-{{#svg-progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
+{{#progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
   <text x="20" y="-16" font-size="12" transform="rotate(90)" text-anchor="middle">
     {{schedule.coveragePercentage}}
   </text>
@@ -31,7 +31,7 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 
 // or blockless:
 
-{{svg-progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
+{{progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
 ```
 
 ### Options
