@@ -12,6 +12,8 @@ An addon for ember-cli that adds a component to show a sizable circle made with 
 ## Todo:
 * Make it "real" responsive
 * Perfectly center text inside
+* Add animations
+* Add a demo
 
 ## Usage
 
