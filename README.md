@@ -51,7 +51,7 @@ The addon provides the following classes to style the file-picker:
 
 ## Changelog
 
-### 0.0.5
+### 0.0.6
 * [FEATURE]       Added animation for the progress indicator
 * [ENHANCEMENT]   Optimized the check for valid values
 * [FEATURE]       Added more state class names for the indicator (empty, filled, invalid)
