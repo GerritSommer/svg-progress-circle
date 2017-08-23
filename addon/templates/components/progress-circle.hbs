@@ -1,7 +1,7 @@
 <svg
   class="progress-circle__svg"
-  width="{{SVGsize}}"
-  height="{{SVGsize}}"
+  width="{{size}}"
+  height="{{size}}"
   xmlns="http://www.w3.org/2000/svg"
 >
 
@@ -9,19 +9,18 @@
     class="progress-circle__circle"
     class=""
     r="{{radius}}"
-    cy="{{coordinates}}"
-    cx="{{coordinates}}"
+    cy="{{XYcoordinates}}"
+    cx="{{XYcoordinates}}"
     stroke-width="{{strokeWidth}}"
     fill="none"
   ></circle>
 
   <circle
-    class="progress-circle__indicator{{if zeroPercentage '--empty' '--filled'}}"
+    class="{{indicatorClassName}}"
     r="{{radius}}"
-    cy="{{coordinates}}"
-    cx="{{coordinates}}"
+    cy="{{XYcoordinates}}"
+    cx="{{XYcoordinates}}"
     stroke-width="{{strokeWidth}}"
-    stroke="red"
     fill="none"
     stroke-dasharray="{{circumference}}"
     stroke-dashoffset="{{strokeDashoffset}}"
@@ -31,4 +30,3 @@
   {{yield}}
 
 </svg>
-

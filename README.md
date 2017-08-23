@@ -17,7 +17,6 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 ## Todo:
 * Make it "real" responsive
 * Perfectly center text inside
-* Add animations
 * Add a demo
 
 ## Usage
@@ -48,7 +47,14 @@ The addon provides the following classes to style the file-picker:
 * `.progress-circle`
   * `.progress-circle__svg`
     * `.progress-circle__circle`
-    * `.progress-circle__indicator(--empty|filled)`
+    * `.progress-circle__indicator(--empty|--filled|--invalid)`
+
+## Changelog
+
+### 0.0.5
+* [FEATURE]       Added animation for the progress indicator
+* [ENHANCEMENT]   Optimized the check for valid values
+* [FEATURE]       Added more state class names for the indicator (empty, filled, invalid)
 
 ## Running
 
@@ -72,3 +78,4 @@ For more information on using ember-cli, visit [http://www.ember-cli.com/](http:
 ember release
 npm publish
 ```
+

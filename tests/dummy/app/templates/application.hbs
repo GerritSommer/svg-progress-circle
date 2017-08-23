@@ -1,5 +1,9 @@
-{{#svg-progress-circle size="40" strokeWidth="3" percentage=23}}
-  <text x="20" y="-16" font-size="12" transform="rotate(90)" text-anchor="middle">
-    23
+{{#progress-circle size="90" strokeWidth="10" percentage=percentage}}
+  <text x="45" y="-40" font-size="16" transform="rotate(90)" text-anchor="middle">
+    {{percentage}}
   </text>
-{{/svg-progress-circle}}
+{{/progress-circle}}
+
+<br>
+
+{{input value=percentage}}
