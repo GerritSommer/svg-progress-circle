@@ -33,7 +33,7 @@ export default Component.extend({
   hasInvalidPercentage: not('hasValidPercentage'),
 
   zeroPercentage: computed('percentage', function() {
-    return parseInt('percentage') === 0;
+    return parseInt(this.get('percentage')) === 0;
   }),
 
 
