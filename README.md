@@ -10,6 +10,9 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 ## Screenshot
 ![Screenshot](preview.png)
 
+## DEMO
+[See the demo](https://gerritsommer.github.io/svg-progress-circle/)
+
 ## Installation
 
 * `ember install svg-progress-circle`
@@ -50,6 +53,9 @@ The addon provides the following classes to style the file-picker:
     * `.progress-circle__indicator(--empty|--filled|--invalid)`
 
 ## Changelog
+
+### 0.0.8
+* [ENHANCEMENT]   Added a demo
 
 ### 0.0.7
 * [BUGFIX]        Fixed check for 0 percentage
