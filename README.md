@@ -54,6 +54,10 @@ The addon provides the following classes to style the file-picker:
 
 ## Changelog
 
+### 0.0.9
+* [BUGFIX]        Added the missing viewBox attribute
+* [ENHANCEMENT]   Added tests
+
 ### 0.0.8
 * [ENHANCEMENT]   Added a demo
 
