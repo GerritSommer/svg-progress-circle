@@ -35,7 +35,6 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 
 {{progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
 ```
-
 ### Options
 
 * `size` default `90` -> the SVG viewport
@@ -51,6 +50,11 @@ The addon provides the following classes to style the file-picker:
   * `.progress-circle__svg`
     * `.progress-circle__circle`
     * `.progress-circle__indicator(--empty|--filled|--invalid)`
+
+or you can import the default styles:
+```sass
+@import "svg-progress-circle";
+```
 
 ## Changelog
 
