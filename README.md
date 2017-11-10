@@ -54,7 +54,7 @@ The addon provides the following classes to style the file-picker:
 or you can import the default styles:
 ```sass
 @import "svg-progress-circle";
-```
+``
 
 ## Changelog
 

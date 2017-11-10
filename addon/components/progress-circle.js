@@ -11,6 +11,7 @@ export default Component.extend({
   size:        90,
   strokeWidth: 10,
 
+
   indicatorClassName: computed('hasValidPercentage', 'empty', function() {
     let state;
     if ( this.get('hasInvalidPercentage') ) {
