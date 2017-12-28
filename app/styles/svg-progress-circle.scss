@@ -10,17 +10,17 @@
     stroke: #cccccc;
   }
 
-  &__indicator {
-      stroke: #004461;
+  &__indicator-1 {
+      stroke:red;
       transition: stroke-dashoffset .7s linear, stroke .7s linear;
 
     &--filled {
-      @extend .progress-circle__indicator;
+      @extend .progress-circle__indicator-1;
     }
 
     &--empty, &--invalid {
       stroke: transparent;
-      @extend .progress-circle__indicator;
+      @extend .progress-circle__indicator1;
     }
   }
 }
