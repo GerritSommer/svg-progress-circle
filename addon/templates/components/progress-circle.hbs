@@ -2,7 +2,7 @@
   class="progress-circle__svg"
   width="{{size}}"
   height="{{size}}"
-  viewBox="0 0 {{size}} {{size}}"
+  viewBox="0 0 100 100"
   xmlns="http://www.w3.org/2000/svg"
 >
 
@@ -10,17 +10,18 @@
     class="progress-circle__circle"
     class=""
     r="{{radius}}"
-    cy="{{XYcoordinates}}"
-    cx="{{XYcoordinates}}"
+    cy="50"
+    cx="50"
     stroke-width="{{strokeWidth}}"
     fill="none"
   ></circle>
 
   <circle
     class="{{indicatorClassName}}"
+    transform="rotate(-90,50,50)"
     r="{{radius}}"
-    cy="{{XYcoordinates}}"
-    cx="{{XYcoordinates}}"
+    cy="50"
+    cx="50"
     stroke-width="{{strokeWidth}}"
     fill="none"
     stroke-dasharray="{{circumference}}"
@@ -28,6 +29,6 @@
   >
   </circle>
 
-  {{yield}}
+  {{yield strokeWidth}}
 
 </svg>

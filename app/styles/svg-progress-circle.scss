@@ -1,5 +1,5 @@
 .progress-circle {
-  transform: rotate(-90deg);
+  // transform: rotate(-90deg);
   display: inline-block;
 
   &__svg {
@@ -22,5 +22,9 @@
       stroke: transparent;
       @extend .progress-circle__indicator;
     }
+  }
+
+  text {
+    // transform: rotate(90deg);
   }
 }

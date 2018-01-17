@@ -40,7 +40,7 @@ export default Component.extend({
 
   // Subtract the borderwidth from the radius, so the svg stays in the viewbox
   radius: computed('XYcoordinates', function() {
-    return this.get('XYcoordinates') - parseInt(this.get('strokeWidth'));
+    return 50 - parseInt(this.get('strokeWidth'));
   }),
 
   // The coordinates for the of the viewBox
@@ -53,7 +53,7 @@ export default Component.extend({
     return parseInt(Math.PI * (2 * this.get('radius')));
   }),
 
-  // This calculateds
+  // This calculates
   strokeDashoffset: computed('percentage', 'radius', function() {
     const circumference = this.get('circumference');
     const percentage    = this.get('hasValidPercentage') ? this.get('percentage') : 0;
