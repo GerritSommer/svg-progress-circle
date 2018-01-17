@@ -1,9 +1,231 @@
-{{#progress-circle size="90" strokeWidth="10" percentage=percentage}}
-  <text x="45" y="-40" font-size="16" transform="rotate(90)" text-anchor="middle">
-    {{percentage}}
-  </text>
-{{/progress-circle}}
+<header>
 
-<br>
+  <nav>
+    <div class="brand">
+      {{!-- <img src="assets/ember-logo.png" alt="logo" height="60px"> --}}
+      {{partial "logo"}}
 
-{{input value=percentage}}
+    </div>
+    <h1>
+      SVG-progress-circle
+    </h1>
+    <ul>
+      <li>
+        <a href="https://github.com/GerritSommer/svg-progress-circle">
+          <img src="assets/octocat.png" height="30" width="30" alt="">
+          Github
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="assets/easypep-logo.png" height="30" width="30" alt="">
+          easyPEP
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</header>
+
+<main>
+
+  {{!-- https://github.com/GerritSommer/svg-progress-circle --}}
+
+  <div class="row">
+
+    <div class="column">
+      <h2>
+        Progress-circle component
+      </h2>
+      <div class="center-content">
+        <label>
+          Percentage (1-100):
+          {{input value=percentage}}
+        </label>
+      </div>
+      <div class="center-content">
+        {{progress-circle
+          size="200"
+          strokeWidth="10"
+          percentage=percentage
+        }}
+      </div>
+    </div>
+
+    <div class="column">
+      <h2>
+        Example
+      </h2>
+
+      <p>
+        <h3>Parameters</h3>
+        <ul>
+          <li>
+            Size: (you can use "px", "rem", etc., defaults to "px")
+          </li>
+          <li>
+            Percentage (1-100)
+          </li>
+          <li>
+            (optional) StrokeWidth. The width of the border
+          </li>
+        </ul>
+      </p>
+
+      <pre>
+        <code>
+
+\{{progress-circle
+  size="200"
+  strokeWidth="10"
+  percentage=percentage
+}}
+
+        </code>
+      </pre>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="column">
+      <h2>
+        Image component
+      </h2>
+      <div class="center-content">
+        <label>
+          Percentage (1-100):
+          {{input value=percentage}}
+        </label>
+      </div>
+      <div class="center-content">
+        {{#progress-circle
+          size="200"
+          strokeWidth="10"
+          percentage=percentage
+            as |strokeWidth|
+        }}
+
+          {{progress-circle/image
+            imageUrl="assets/bill.jpg"
+            strokeWidth=strokeWidth
+            imageGap="2"
+          }}
+
+        {{/progress-circle}}
+      </div>
+    </div>
+
+    <div class="column">
+      <h2>
+        Example
+      </h2>
+
+      <p>
+        <h3>Parameters</h3>
+        <ul>
+          <li>
+            ImageUrl: all valid urls are allowed
+          </li>
+          <li>
+            strokeWidth: needed to calculate the image radius and position
+          </li>
+          <li>
+            (optional) ImageGap. the gap between between the circle and the image
+          </li>
+        </ul>
+      </p>
+
+      <pre>
+        <code>
+
+\{{#progress-circle
+  size="200"
+  strokeWidth="10"
+  percentage=percentage
+    as |strokeWidth|
+}}
+
+  \{{progress-circle/image
+    imageUrl="assets/bill.jpg"
+    strokeWidth=strokeWidth
+    imageGap="2"
+  }}
+
+\{{/progress-circle}}
+
+        </code>
+      </pre>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <h2>Text component</h2>
+
+      <div class="center-content">
+        <label>
+          Percentage (1-100):
+          {{input value=percentage}}
+        </label>
+      </div>
+
+      <div class="center-content">
+        {{#progress-circle
+          size="200"
+          strokeWidth="10"
+          percentage=percentage
+        }}
+
+          {{#progress-circle/text
+            font-size="2rem"
+            font-family="inherit"
+          }}
+            {{percentage}}
+          {{/progress-circle/text}}
+
+        {{/progress-circle}}
+      </div>
+    </div>
+    <div class="column">
+      <h2>Example</h2>
+
+      <p>
+        <h3>Parameters</h3>
+        <ul>
+          <li>
+            (optional) font-size
+          </li>
+          <li>
+            (optional) font-family
+          </li>
+        </ul>
+      </p>
+
+      <pre>
+        <code>
+
+\{{#progress-circle
+  size="200"
+  strokeWidth="10"
+  percentage=percentage
+    as |elementId radius|
+}}
+
+  \{{#progress-circle/text
+    font-size="2rem"
+    font-family="inherit"
+  }}
+    \{{percentage}}
+  \{{/progress-circle/text}}
+
+\{{/progress-circle}}
+
+        </code>
+      </pre>
+    </div>
+  </div>
+
+</main>
