@@ -17,29 +17,72 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 
 * `ember install svg-progress-circle`
 
-## Todo:
-* Make it "real" responsive
-* Perfectly center text inside
-* Add a demo
-
 ## Usage
 
 ```handlebars
+// blockless:
+{{progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
+
+
+
+// as a block
 {{#progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
-  <text x="20" y="-16" font-size="12" transform="rotate(90)" text-anchor="middle">
-    {{schedule.coveragePercentage}}
-  </text>
+  {{!-- inner content --}}
 {{/svg-progress-circle}}
 
-// or blockless:
 
-{{progress-circle size="40" strokeWidth="3" percentage=model.somePercentage}}
+
+// with inner text
+{{#progress-circle
+  size="200"
+  strokeWidth="10"
+  percentage=percentage
+}}
+
+  {{#progress-circle/text
+    font-size="2rem"
+    font-family="inherit"
+  }}
+    {{percentage}}
+  {{/progress-circle/text}}
+
+{{/progress-circle}}
+
+
+
+
+// with inner image
+{{#progress-circle
+  size="200"
+  strokeWidth="10"
+  percentage=percentage
+    as |strokeWidth|
+}}
+
+  {{progress-circle/image
+    imageUrl="assets/bill.jpg"
+    strokeWidth=strokeWidth
+    imageGap="2"
+  }}
+
+{{/progress-circle}}
 ```
 ### Options
 
+#### progress-circle
 * `size` default `90` -> the SVG viewport
 * `strokeWidth` default `10` -> the width of the border
 * `percentage` default `0` -> a value between `1` and `100`
+
+#### progress-circle/text
+* `font-size` default `initial`
+* `font-family` dfeault `arial`
+
+#### progress-circle/image
+* `imageUrl` -> a standard URL to the image
+* `strokeWidth` -> an integer number to control the width of the image border
+* `imageGap` default `0` -> an integer number to control the gap
+                            between the circle and the image
 
 
 ### CSS
@@ -54,9 +97,21 @@ The addon provides the following classes to style the file-picker:
 or you can import the default styles:
 ```sass
 @import "svg-progress-circle";
-``
+```
+
+
+** NOTE:
+After wrecking the gh-pages and messing with the repository,
+I had to rollback everything and properly learn how to handle this github stuff.
+I hope all is now properly documented, pushed and published.
+But also there have been Features as well. Read below.
 
 ## Changelog
+
+### 1.1.3
+* [FEATURE]       Added a an SVG image component.
+* [FEATURE]       Added a an SVG text component.
+* [ENHANCEMENT]   Proper responsiveness provided. (Use sizes like "3em" or percentages)
 
 ### 0.0.9
 * [BUGFIX]        Added the missing viewBox attribute
