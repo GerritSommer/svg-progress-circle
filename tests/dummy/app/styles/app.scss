@@ -1,0 +1,173 @@
+@import 'app/styles/svg-progress-circle.scss';
+
+$highlight: rgb(189, 29, 53);
+$base-color: #E04E39;
+// $highlight: rgb(189, 29, 53);
+
+
+body {
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #efefef;
+  font-size: 16px;
+  color: #efefef;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+
+  h1 {
+    flex: 1;
+  }
+
+  > svg {
+    margin-bottom: .75rem;
+    margin-right: .75rem;
+  }
+}
+
+header {
+  // margin: 1rem 3rem;
+}
+
+main {
+  margin: 1rem 3rem;
+
+  p {
+    margin-left: 1rem;
+  }
+}
+
+pre {
+  background-color: #444545;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border-radius: .25rem;
+  border: 3px solid #ccc;
+
+  code {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  padding: .25rem 2rem;
+  background-color: $base-color;
+  margin: 0;
+  margin-bottom: 20px;
+
+  .brand {
+    display: flex;
+    flex: none;
+    align-items: center;
+    font-size: 2rem;
+
+    > svg {
+      margin-right: 1rem;
+    }
+
+
+  }
+  h1 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul {
+    flext: none;
+    display: flex;
+    flex-direction: row-reverse;
+
+    li {
+      list-style-type: none;
+      margin-left: 1rem;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        img {
+          border-radius: .15rem;
+        }
+      }
+
+    }
+  }
+}
+
+label {
+  text-align: center;
+  font-weight: bolder;
+
+  > input {
+    margin-top: .25rem;
+    display: block;
+    border-radius: .25rem;
+    border: none;
+    background-color: #efefef;
+    text-align: center;
+    color: grey;
+  }
+}
+
+ul {
+  -webkit-padding-start: 20px;
+  li {
+    padding: .5rem 0;
+  }
+}
+
+.row {
+  margin-bottom: 2rem;
+
+  background-color: $base-color;
+  box-shadow: 0 0 2px 4px #ccc;
+  border-radius: .5rem;
+
+  .column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    padding: .75rem;
+  }
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+ @media screen and (min-width: 768px) {
+  .row {
+    display: flex;
+  }
+ }
+
+input {
+  padding: .5rem .3rem;
+  font-size: 1rem;
+}
