@@ -106,6 +106,9 @@ But also there have been Features as well. Read below.
 
 ## Changelog
 
+### 1.1.4
+* [UPDATE]        Updated ember-cli-sass to 7.2.0
+
 ### 1.1.3
 * [FEATURE]       Added a an SVG image component.
 * [FEATURE]       Added a an SVG text component.
