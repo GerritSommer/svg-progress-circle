@@ -13,8 +13,9 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 ## DEMO
 [See the demo](https://gerritsommer.github.io/svg-progress-circle/)
 
-## Installation
-
+Installation
+------------------------------------------------------------------------------
+* `ember install ember-cli-sass`
 * `ember install svg-progress-circle`
 
 ## Usage
@@ -84,7 +85,6 @@ This component is part of the rewrite of the frontend-app for my job at easyPEP.
 * `imageGap` default `0` -> an integer number to control the gap
                             between the circle and the image
 
-
 ### CSS
 
 The addon provides the following classes to style the file-picker:
@@ -98,8 +98,6 @@ or you can import the default styles:
 ```sass
 @import "svg-progress-circle";
 ```
-
-
 ** NOTE:
 After wrecking the gh-pages and messing with the repository,
 I had to rollback everything and properly learn how to handle this github stuff.
@@ -128,26 +126,11 @@ But also there have been Features as well. Read below.
 * [ENHANCEMENT]   Optimized the check for valid values
 * [FEATURE]       Added more state class names for the indicator (empty, filled, invalid)
 
-## Running
+### Linting
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
-
-## Publishing
-
-```bash
-ember release
-npm publish
-```
-
+### Running tests
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
